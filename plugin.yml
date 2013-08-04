@@ -1,0 +1,4 @@
+name: cConnector
+main: castro.connector.CConnector
+version: 1.0.0
+depend: [WorldEdit, WorldGuard, LogBlock, Multiverse-Core]
