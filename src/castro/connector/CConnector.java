@@ -53,7 +53,8 @@ public class CConnector extends CPlugin implements Listener
 		logblock	= (LogBlock)		PM.getPlugin("LogBlock");
 		worldguard	= (WorldGuardPlugin)PM.getPlugin("WorldGuard");
 		
-		consumer = logblock.getConsumer();
+		if(logblock != null)
+			consumer = logblock.getConsumer();
 	}
 	
 	
