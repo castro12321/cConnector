@@ -40,8 +40,8 @@ public class CWE
 		check("aliquam.familiar"	, 10*k);
 		check("aliquam.builder"		, 30*k);
 		check("aliquam.advbuilder"	, 70*k);
-		check("aliquam.designer"	, 150*k);
-		check("aliquam.architect"	, 450*k);
+		check("aliquam.designer"	, 250*k);
+		check("aliquam.architect"	, 1000*k);
 		
 		check("aliquam.welimit.25k"	, 25*k);
 		check("aliquam.welimit.100k", 100*k);
