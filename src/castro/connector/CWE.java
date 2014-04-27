@@ -23,29 +23,42 @@ import com.sk89q.worldedit.LocalPlayer;
 public class CWE
 {
 	private static final int k = 1000;
+	private static final int m = 1000*k;
 	
 	// Limit management
 	private static int limit;
 	private static LocalPlayer player;
+	
 	private static void check(String permission, int limit)
 	{
 		if(player.hasPermission(permission))
 			CWE.limit = limit;
 	}
+	
 	public static int getLimit(LocalPlayer p)
 	{
-		limit = 0;
+		limit  = 0;
 		player = p;
 		
-		check("aliquam.familiar"	, 10*k);
-		check("aliquam.builder"		, 30*k);
-		check("aliquam.advbuilder"	, 70*k);
-		check("aliquam.designer"	, 250*k);
-		check("aliquam.architect"	, 1000*k);
+		check("aliquam.player"      , 5*k);
+		check("aliquam.familiar"    , 15*k);
+		check("aliquam.builder"     , 50*k);
+		check("aliquam.advbuilder"  , 150*k);
+		check("aliquam.designer"    , 300*k);
+		check("aliquam.architect"   , 1000*k);
 		
-		check("aliquam.welimit.25k"	, 25*k);
+		check("aliquam.welimit.25k" , 25*k);
 		check("aliquam.welimit.100k", 100*k);
 		check("aliquam.welimit.250k", 250*k);
+		check("aliquam.welimit.1m"  , 1*m);
+		check("aliquam.welimit.5m"  , 5*m);
+		
+		check("aliquam.welimit.x2"  , limit * 2);
+		check("aliquam.welimit.x22" , limit * 2);
+		check("aliquam.welimit.x222", limit * 2);
+		check("aliquam.welimit.x5"  , limit * 5);
+		check("aliquam.welimit.x55" , limit * 5);
+		check("aliquam.welimit.x555", limit * 5);
 		
 		check("aliquam.mod", -1);
 		
