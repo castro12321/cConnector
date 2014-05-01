@@ -1,5 +1,5 @@
 name: cConnector
 main: castro.connector.CConnector
 version: 1.1.1
-depend: [cPlugin]
+depend: [Base_cPlugin]
 softdepend: [WorldGuard, LogBlock]
