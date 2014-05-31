@@ -40,11 +40,11 @@ public class CWE
 		limit  = 0;
 		player = p;
 		
-		check("aliquam.player"      , 5*k);
-		check("aliquam.familiar"    , 15*k);
-		check("aliquam.builder"     , 50*k);
-		check("aliquam.advbuilder"  , 150*k);
-		check("aliquam.designer"    , 300*k);
+		check("aliquam.player"      , 10*k);
+		check("aliquam.familiar"    , 30*k);
+		check("aliquam.builder"     , 100*k);
+		check("aliquam.advbuilder"  , 300*k);
+		check("aliquam.designer"    , 1000*k);
 		check("aliquam.architect"   , 1000*k);
 		
 		check("aliquam.welimit.25k" , 25*k);
