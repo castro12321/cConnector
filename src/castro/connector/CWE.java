@@ -50,7 +50,9 @@ public class CWE
 		check("aliquam.welimit.25k" , 25*k);
 		check("aliquam.welimit.100k", 100*k);
 		check("aliquam.welimit.250k", 250*k);
+		check("aliquam.welimit.500k", 500*k);
 		check("aliquam.welimit.1m"  , 1*m);
+		check("aliquam.welimit.2m"  , 2*m);
 		check("aliquam.welimit.5m"  , 5*m);
 		
 		check("aliquam.welimit.x2"  , limit * 2);
