@@ -40,12 +40,12 @@ public class CWE
 		limit  = 0;
 		player = p;
 		
-		check("aliquam.player"      , 10*k);
-		check("aliquam.familiar"    , 30*k);
-		check("aliquam.builder"     , 100*k);
-		check("aliquam.advbuilder"  , 300*k);
-		check("aliquam.designer"    , 1000*k);
-		check("aliquam.architect"   , 1000*k);
+		check("aliquam.player"      , 10*k); // 25k
+		check("aliquam.familiar"    , 30*k); // 75k
+		check("aliquam.builder"     , 100*k); // 200k
+		check("aliquam.advbuilder"  , 300*k); // 500k
+		check("aliquam.designer"    , 1000*k); // 1000k
+		check("aliquam.architect"   , 1000*k); // 1000k
 		
 		check("aliquam.welimit.100k", 100*k);
 		check("aliquam.welimit.500k", 500*k);
@@ -56,8 +56,11 @@ public class CWE
 		check("aliquam.welimit.x22" , limit * 2);
 		check("aliquam.welimit.x3"  , limit * 3);
 		check("aliquam.welimit.x33" , limit * 3);
-		check("aliquam.welimit.x5"  , limit * 5);
-		check("aliquam.welimit.x55" , limit * 5);
+		check("aliquam.welimit.vote", limit * 2);
+		
+		// Hard limit for regular players
+		if(limit > 5*m)
+			limit = 5*m;
 		
 		check("aliquam.mod", -1);
 		
