@@ -17,8 +17,7 @@
 
 package castro.connector;
 
-import com.sk89q.worldedit.LocalPlayer;
-
+import com.sk89q.worldedit.session.SessionOwner;
 
 public class CWE
 {
@@ -27,7 +26,7 @@ public class CWE
 	
 	// Limit management
 	private static int limit;
-	private static LocalPlayer player;
+	private static SessionOwner player;
 	
 	private static void check(String permission, int limit)
 	{
@@ -35,17 +34,17 @@ public class CWE
 			CWE.limit = limit;
 	}
 	
-	public static int getLimit(LocalPlayer p)
+	public static int getLimit(SessionOwner p)
 	{
 		limit  = 0;
 		player = p;
 		
-		check("aliquam.player"      , 10*k); // 25k
-		check("aliquam.familiar"    , 30*k); // 75k
-		check("aliquam.builder"     , 100*k); // 200k
-		check("aliquam.advbuilder"  , 300*k); // 500k
-		check("aliquam.designer"    , 1000*k); // 1000k
-		check("aliquam.architect"   , 1000*k); // 1000k
+		check("aliquam.player"      , 50*k);
+		check("aliquam.familiar"    , 100*k);
+		check("aliquam.builder"     , 250*k);
+		check("aliquam.advbuilder"  , 500*k);
+		check("aliquam.designer"    , 1000*k);
+		check("aliquam.architect"   , 1000*k);
 		
 		check("aliquam.welimit.100k", 100*k);
 		check("aliquam.welimit.500k", 500*k);
@@ -59,8 +58,8 @@ public class CWE
 		check("aliquam.welimit.vote", limit * 2);
 		
 		// Hard limit for regular players
-		if(limit > 5*m)
-			limit = 5*m;
+		if(limit > 3*m)
+			limit = 3*m;
 		
 		check("aliquam.mod", -1);
 		
