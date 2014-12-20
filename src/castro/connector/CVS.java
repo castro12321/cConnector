@@ -12,7 +12,11 @@ public class CVS
 {	
 	public static boolean canUse(String command, Player p)
 	{
+		if(!p.hasPermission("voxelsniper.sniper"))
+			return false;
 		if (p.hasPermission("voxelsniper.*"))
+			return true;
+		if (p.hasPermission("voxelsniper.command." + command))
 			return true;
 		
 		switch(command)
@@ -49,6 +53,8 @@ public class CVS
 	public static boolean canUseBrush(String[] args, Player p)
 	{
 		if (p.hasPermission("voxelsniper.*"))
+			return true;
+		if (p.hasPermission("voxelsniper.brush." + args[0]))
 			return true;
 		
 		switch(args[0])
